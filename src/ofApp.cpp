@@ -6,7 +6,7 @@
 #define MIN_JUMP -50
 #define MAX_CIRCLE_RADIUS 100
 #define MIN_CIRCLE_RADIUS 1
-#define FRAME_RPS 60
+#define FRAME_RPS 120
 #define BANDS_TO_GET 128
 
 //circle coords
@@ -38,7 +38,7 @@ void ofApp::setup(){
     //set framerate
     ofSetFrameRate(FRAME_RPS);
     
-    // load in sounds:
+    // load in sounds ************* ENTER FILENAME and DROP FILE in bin/data *************
     beat.load("01 - The Legend Of Zelda (Original Mix).mp3");
     
     // the fft needs to be smoothed out, so we create an array of floats
