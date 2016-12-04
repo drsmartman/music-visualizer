@@ -1,11 +1,12 @@
 #include "ofApp.h"
 
-#define NUM_CIRCLES 128
+//set constant values
+#define NUM_CIRCLES 256
 #define MAX_JUMP 50
 #define MIN_JUMP -50
-#define MAX_CIRCLE_RADIUS 75
+#define MAX_CIRCLE_RADIUS 100
 #define MIN_CIRCLE_RADIUS 1
-#define FRAME_RPS 128
+#define FRAME_RPS 60
 #define BANDS_TO_GET 128
 
 //circle coords
@@ -38,7 +39,7 @@ void ofApp::setup(){
     ofSetFrameRate(FRAME_RPS);
     
     // load in sounds:
-    beat.load("05 - Smells Like Teen Spirit.mp3");
+    beat.load("01 - The Legend Of Zelda (Original Mix).mp3");
     
     // the fft needs to be smoothed out, so we create an array of floats
     // for that purpose:
@@ -51,9 +52,9 @@ void ofApp::setup(){
     myCircleY = ofGetWindowHeight()/2;
     myCircleR = 150;
     
-    myColorB = ofRandom(0, 255);
-    myColorG = ofRandom(0, 255);
-    myColorR = ofRandom(0, 255);
+    myColorB = ofRandom(100, 200);
+    myColorG = ofRandom(100, 200);
+    myColorR = ofRandom(100, 200);
 
 
     //play song
@@ -65,7 +66,8 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
     
-    ofBackground(255,255,255);
+    //set background color
+    ofBackground(0,0,0);
     
     // update the sound playing system:
     ofSoundUpdate();
