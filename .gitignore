@@ -1,0 +1,2 @@
+#ignore specific MP3s since they could be liscensed
+bin/data/**
